@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "img",
+			"path": "../reservaDechalesAngular/ReservaDeChale/src/assets/img"
+		},
+		{
+			"name": "reserva",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "reserva"
+	}
+}
