@@ -39,6 +39,9 @@ function enviarReserva(){
      if(chaleValue == 0){
          console.log("deu ruim meu chapa");
      }
+    //  else if(chaleValue == indisponivel){
+    //     console.log("chale Indisponivel")
+    //  }
      else{
          const newReserva = {
              userName: userName,
