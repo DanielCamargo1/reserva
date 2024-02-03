@@ -156,6 +156,36 @@ form{
     text-align: center;
 }
 
+label{
+    font-size: 30px;
+    font-family: rubik;
+    color:#214b03;
+    margin-top: 6px;   
+}
+
+#adm{
+    margin-top:25px;
+    font-size: 20px;
+    color: blue;
+    text-decoration: none;
+}
+
+input{
+    width: auto;
+    height: 27px;
+    font-size: 16px;
+    border-radius: 10px;
+    border:2px solid #214b03;
+}
+
+select{
+    width: auto;
+    height: 27px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid #214b03;
+}
+
 #formulario {
     top: 50%;
     left: 100%;
@@ -164,9 +194,15 @@ form{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     display: block;
     flex-direction: column;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius:20px ;
+    box-shadow: 5px 5px 10px #214b03;
 }
 
 footer{
+    margin-top: 5%;
     height:100px;
     background-color: #000300;
     color: white;

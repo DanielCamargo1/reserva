@@ -41,7 +41,7 @@
                 <div class="chales-div">
                     <h3>Chalé Fé</h3>
                     <img class ="chale-img"src="imagem/chaleColorido.jpg" alt="chale">
-                    <button onclick="Reservar()">Reservar</button>
+                    <a href="#formulario"><button onclick="Reservar()">Reservar</button></a>
                 </div>
             </li>
             <li class="chale-box">
@@ -237,7 +237,7 @@
             <input type="text" id="name" name="nome" required>
             <label for="chaleNome" >Selecione O Chalé</label>
             <select name="Selecione" id="selecioneChale" required >
-                <option value="0">Selecione o Chalé</option>
+                <option value="0" >Selecione o Chalé</option>
                 <option value="1">Fé</option>
                 <option value="2">Rosa De Saron</option>
                 <option value="3">Estrela Da Manhã</option>
@@ -264,7 +264,7 @@
             <input type="number" id="quantidadeDePessoa" required>
             <button onclick="enviarReserva()" type="button">Enviar Reserva</button>
         </form>
-        <a href="adm.htlm"><p>Sou Administrador</p></a>
+        <a href="adm.htlm"><p id="adm">Sou Administrador</p></a>
     </main>
     <footer>
         <p>Direitos reservados</p>
