@@ -237,7 +237,7 @@
             <input type="text" id="name" name="nome" required>
             <label for="chaleNome" >Selecione O Chalé</label>
             <select name="Selecione" id="selecioneChale" required >
-                <option  value="0">Selecione o Chalé</option>
+                <option value="0">Selecione o Chalé</option>
                 <option value="1">Fé</option>
                 <option value="2">Rosa De Saron</option>
                 <option value="3">Estrela Da Manhã</option>
@@ -261,9 +261,10 @@
                 <option value="21">Jess</option>
             </select>
             <label for="quantidade">Quantide de Pessoas</label>
-            <input type="number" id="quantidadeDePessoa">
-            <button onclick="enviarReserva()" type="submit">Enviar Reserva</button>
+            <input type="number" id="quantidadeDePessoa" required>
+            <button onclick="enviarReserva()" type="button">Enviar Reserva</button>
         </form>
+        <a href="adm.htlm"><p>Sou Administrador</p></a>
     </main>
     <footer>
         <p>Direitos reservados</p>
