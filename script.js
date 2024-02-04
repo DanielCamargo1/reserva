@@ -35,7 +35,7 @@ const quantidadeDePessoa = document.getElementById("quantidadeDePessoa").value;
 
 function enviarReserva(){
     const chaleSelect = document.getElementById("selecioneChale");
-    const chaleValue = chaleSelect.options[chaleSelect.selectedIndex].value;
+    const chaleValue = chaleSelect.options[chaleSelect.selectedIndex].value; 
      if(chaleValue == 0){
          console.log("deu ruim meu chapa");
      }
@@ -48,8 +48,7 @@ function enviarReserva(){
              chaleValue: chaleValue,
              quantidadeDePessoa: quantidadeDePessoa,
          };
-         criarReserva(newReserva);
-         console.log(newReserva);
+         return criarReserva(newReserva);
      }
  }
 
