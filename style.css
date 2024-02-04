@@ -15,7 +15,8 @@ header{
 
 .img-header{
     width: 100%;
-    box-shadow: 0px 10px 20px #163505b9;/
+    box-shadow: 0px 10px 20px #163505b9;
+    border-radius: 10px;
 }
 
 .Aguia{
@@ -63,15 +64,30 @@ h1{
     margin-left:25%;
 }
 
-.paragrafo, ul{
+.backInstrucoes{
+    width: 100%;
+}
+
+ ul{
     font-family: rubik;
     max-width: 800px;
     margin: 0 auto;
     font-size: 120%;
-    margin-top: 8px;
+    margin-top: -430px;
+    position: relative;
+    color: #F2F2F2;
 }
+
+.paragrafo{
+    font-family: rubik;
+    max-width: 800px;
+    margin-top: 3%;
+    margin: 0 auto;
+    font-size: 120%;
+}
+
 strong{
-    color: #214b03;
+    color: #c07e02;
 }
 
 h2{
@@ -83,6 +99,7 @@ h2{
 
 .chales{
     align-items: center;
+    margin-top: 14%;
 }
 
 .chale-box{
