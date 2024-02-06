@@ -1,54 +1,31 @@
 const baseUrl = "https://localhost:7039";
 
+ const nomeUsuario = document.getElementById("name").value;
+ const quantidadeDePessoa = parseInt(document.getElementById("quantidadeDePessoa").value);
+ const chales = document.getElementById('selecioneChale');
+ var chale = chales.value;
 
-const userName = document.getElementById("name").value;
-const quantidadeDePessoa = document.getElementById("quantidadeDePessoa").value;
 
+async function enviarReserva(){
+    console.log(chale)
+    try{
+         const res = await fetch(`${baseUrl}/api/Reserva`,{
+             method: 'POST',
+             headers: {
+                 'Content-Type' :'application/json'
+         },
+         body : JSON.stringify(reserva) //converte a reserva para json
+     });
 
- async function getReservas() {
-     try {
-         const response = await fetch(`${baseUrl}/api/Reserva`, {
-             mode: 'no-cors',
-         });
-         console.log("Requisição bem-sucedida, mas sem acesso à resposta:", response);
-     } catch (error) {
-         console.error("Erro ao obter reservas:", error);
+         if(res.status === 200 || res.status === 201){
+             const resposta = await res.json();
+             console.log("postou", resposta)
+         }
+         else{
+             console.log('DEU ERRO', res.status)
+         }
+     } catch(erro){
+         console.log("Deu Erro:", erro)
      }
 }
-
- async function criarReserva(reserva) {
-     try {
-         const response = await fetch(`${baseUrl}/api/Reserva`, { // Passando o caminho
-             mode: 'no-cors',
-             method: "POST", // Explicificando o método em que eu desejo chamar
-             headers: {
-                 "Content-Type": "application/json", //Esta indicando que o corpo da requisição pe um arquivo Json
-             },
-             body: JSON.stringify(reserva), //Converte o objeto reserva para uma string JSON, que é enviada como o corpo da requisição POST.
-         });
-         const data = await response.json();
-         console.log("Reserva criada:", data);
-     } catch (error) {
-         console.error("Erro ao criar reserva:", error);
-     }
- }
-
-function enviarReserva(){
-    const chaleSelect = document.getElementById("selecioneChale");
-    const chaleValue = chaleSelect.options[chaleSelect.selectedIndex].value; 
-     if(chaleValue == 0){
-         console.log("deu ruim meu chapa");
-     }
-    //  else if(chaleValue == indisponivel){
-    //     console.log("chale Indisponivel")
-    //  }
-     else{
-         const newReserva = {
-             userName: userName,
-             chaleValue: chaleValue,
-             quantidadeDePessoa: quantidadeDePessoa,
-         };
-         return criarReserva(newReserva);
-     }
- }
-
+ 
