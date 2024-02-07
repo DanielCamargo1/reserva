@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administradores dos chalés</title>
+    <link rel="stylesheet" href="styleAdm.css">
 </head>
 <body>
-    <label for="username">UserName</label>
-    <input type="text"  id="username" required>
-    <label for="Password">Senha</label>
-    <input type="password" id="PassWord" required>
-    <button onclick="login()" type="button">Enviar Reserva</button>
-    <h1 class="paragrafo" id="h1"></h1>
-
+    <form class="background-form">
+        <label for="username">Usuario:</label>
+        <input type="text"  id="username" required >
+        <label for="Password">Senha</label>
+        <input type="password" id="PassWord" required>
+        <button onclick="login()" type="button" class="button-enviar">Enviar Reserva</button>
+        <a href="reserva.html"><p id="adm">Voltar Não sou Administrador</p></a>
+        <h1 class="paragrafo" id="h1"></h1>
+    </form>
     <script src="scriptAdm.js"></script>
 </body>
 </html>

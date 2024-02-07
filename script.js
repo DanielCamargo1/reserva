@@ -3,7 +3,7 @@ const baseUrl = "https://localhost:7039";
  const nomeUsuario = document.getElementById("name").value;
  const quantidadeDePessoa = parseInt(document.getElementById("quantidadeDePessoa").value);
  const chales = document.getElementById('selecioneChale');
- var chale = chales.value;
+ const chale = chales.value;
 
 
 async function enviarReserva(){
@@ -20,6 +20,8 @@ async function enviarReserva(){
          if(res.status === 200 || res.status === 201){
              const resposta = await res.json();
              console.log("postou", resposta)
+             // fazer a validção if( não foi ocupado)...
+             //Else passar os nomes
          }
          else{
              console.log('DEU ERRO', res.status)

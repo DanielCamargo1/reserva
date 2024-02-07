@@ -19,6 +19,9 @@
      let user = document.getElementById("username").value;
      let password = document.getElementById("PassWord").value;
      if (user === "a" && password === "123") {
+        //Bloquear os acesssos o form de login
+
+        //liberar o nome dos usuarios;
          let EspaceMensage = document.getElementById("h1");
          const dados = await getReservas();
          EspaceMensage.textContent = JSON.stringify(dados);

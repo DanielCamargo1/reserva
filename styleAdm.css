@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-image: url("imagem/localchalesSitioFormoso.png");
+    background-color: green;
+    height: 500px;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+
+.background-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20%;
+    background-color: aliceblue;
+    box-shadow: 10px 10px 40px #419207;
+    border-radius: 10%;
+    gap:15px;
+}
+
+.button-enviar{
+    width: 130px;
+    height: 90px;
+    color:aliceblue;
+    background-color: #022601;
+    margin-top: 2%;
+    border-radius: 20% ;
+    font-size: 20px;
+}
+
+label{
+    font-size: 30px;
+    font-family: rubik;
+    color:#214b03;
+    margin-top: 6px;   
+}
+
+input{
+    width: auto;
+    height: 27px;
+    font-size: 16px;
+    border-radius: 10px;
+    border:2px solid #214b03;
+    text-align: center;
+}
