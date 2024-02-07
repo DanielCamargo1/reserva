@@ -18,13 +18,16 @@
  async function login() {
      let user = document.getElementById("username").value;
      let password = document.getElementById("PassWord").value;
-     if (user === "a" && password === "123") {
+     if (user === "hebreus" && password === "138") {
         //Bloquear os acesssos o form de login
-
+        const spaceForm = document.getElementById("form");
+         spaceForm.style.display = 'none';
+         
         //liberar o nome dos usuarios;
-         let EspaceMensage = document.getElementById("h1");
+         const spaceMensage = document.getElementById("h1");
          const dados = await getReservas();
-         EspaceMensage.textContent = JSON.stringify(dados);
+         spaceMensage.textContent = JSON.stringify(dados);
+         
      } else {
          alert("Opsss! Senha ou usuário incorreto, tente novamente!");
      }
