@@ -212,6 +212,12 @@ select{
     border: 2px solid #214b03;
 }
 
+#erro{
+    width: 100%;
+    font-size : 30px;
+    color: red;
+}
+
 #formulario {
     top: 50%;
     left: 100%;

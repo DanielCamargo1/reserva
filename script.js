@@ -9,6 +9,7 @@ async function enviarReserva() {
         const nomeUsuario = document.getElementById('Username').value;
         const quantidadeDePessoa = parseInt(document.getElementById('quantidadeDePessoa').value);
         const chale = parseInt(document.getElementById('selecioneChale').value);
+        const msgErro = document.getElementById("erro");
 
         const reserva = {
             nomeUsuario,
@@ -26,8 +27,12 @@ async function enviarReserva() {
             const resposta = await res.json();
             Reservar();
             console.log('Reserva enviada com sucesso:', resposta);
+        }else if(res.status === 400)
+        {
+            msgErro.innerHTML = "Chalé ja está cadastrado! Tente novamente!";
         } else {
             console.log('Erro ao enviar reserva:', res.status);
+            msgErro.innerHTML = res.status;
         }
     } catch (erro) {
         console.log("Deu Erro:", erro)
