@@ -23,7 +23,7 @@ async function enviarReserva() {
             },
             body: JSON.stringify(reserva)
         });
-        if (res.status === 200 || res.status === 201) {
+        if (res.status >= 200 || res.status < 300) {
             const resposta = await res.json();
             Reservar();
             console.log('Reserva enviada com sucesso:', resposta);
