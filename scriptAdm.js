@@ -29,7 +29,7 @@
          }else{
             spaceMensage.textContent = 'Não há reservas'
          }
-         console.table(dados);
+         console.log(typeof dados);
      } else {
          alert("Opsss! Senha ou usuário incorreto, tente novamente!");
      }
