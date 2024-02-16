@@ -1,9 +1,46 @@
 const baseUrl = "https://localhost:7039";
-function Reservar(button) {
-    button.disabled = true;
-    button.parentNode.parentNode.classList.add('chale-indisponivel'); // Adiciona classe para indicar que o chalé está indisponível
+
+//  function Reservar(button) {
+//      button.disabled = true;
+//      button.parentNode.classList.add('chale-indisponivel'); 
+     
+//  }
+
+// Função para verificar se o chalé já está cadastrado na API
+async function verificarChalesCadastrados() {
+    try {
+        const response = await fetch(`${baseUrl}/api/Reserva`);
+        if (!response.ok) {
+            throw new Error('Erro ao verificar os chalés na API');
+        }
+        const data = await response.json();
+        return data.map(chale => chale.nome);
+    } catch (error) {
+        console.error('Erro:', error);
+        return [];
+    }
 }
- 
+
+async function inicializarChales() {
+    const chalesCadastrados = await verificarChalesCadastrados();
+    const chaleBoxes = document.querySelectorAll('.chale-box');
+    chaleBoxes.forEach(chaleBox => {
+        const chaleNome = chaleBox.querySelector('h3').textContent;
+        if (chalesCadastrados.includes(chaleNome)) {
+            chaleBox.classList.add('reservado');
+            const reservadoText = document.createElement('span');
+            reservadoText.classList.add('reservado-text');
+            reservadoText.innerText = 'RESERVADO';
+            chaleBox.appendChild(reservadoText);
+            const reservarButton = chaleBox.querySelector('button');
+            reservarButton.disabled = true;
+        }
+    });
+}
+
+inicializarChales();
+
+
 async function enviarReserva() {
     try {
         const nomeUsuario = document.getElementById('Username').value;

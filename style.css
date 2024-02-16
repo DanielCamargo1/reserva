@@ -218,6 +218,22 @@ select{
     color: red;
 }
 
+.reservado {
+    pointer-events: none; 
+    opacity: 0.5; 
+}
+
+.reservado-text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    transform: rotate(-45deg);
+    padding: 5px 10px;
+}
+
+
 #formulario {
     top: 50%;
     left: 100%;
