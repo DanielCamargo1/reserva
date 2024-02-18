@@ -40,7 +40,6 @@ async function inicializarChales() {
 
 inicializarChales();
 
-
 async function enviarReserva() {
     try {
         const nomeUsuario = document.getElementById('Username').value;
@@ -66,7 +65,7 @@ async function enviarReserva() {
             console.log('Reserva enviada com sucesso:', resposta);
         }else if(res.status === 400)
         {
-            msgErro.innerHTML = "Chalé ja está cadastrado! Tente novamente!";
+            prompt = `O chalé ${chale} ja está cadastrado! Tente novamente!`;
         } else {
             console.log('Erro ao enviar reserva:', res.status);
             msgErro.innerHTML = res.status;
