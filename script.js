@@ -1,12 +1,6 @@
 const baseUrl = "https://localhost:7039";
 
-//  function Reservar(button) {
-//      button.disabled = true;
-//      button.parentNode.classList.add('chale-indisponivel'); 
-     
-//  }
-
-// Função para verificar se o chalé já está cadastrado na API
+// Busca se há chalé já cadastrado na API 
 async function verificarChalesCadastrados() {
     try {
         const response = await fetch(`${baseUrl}/api/Reserva`);
@@ -20,7 +14,7 @@ async function verificarChalesCadastrados() {
         return [];
     }
 }
-
+  
 async function inicializarChales() {
     const chalesCadastrados = await verificarChalesCadastrados();
     const chaleBoxes = document.querySelectorAll('.chale-box');

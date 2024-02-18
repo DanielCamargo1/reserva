@@ -24,10 +24,11 @@
          spaceForm.style.display = 'none';
          const spaceMensage = document.getElementById("h1");
          const dados = await getReservas();
+         
          if(dados != null){
              spaceMensage.textContent = JSON.stringify(dados);
          }else{
-            spaceMensage.textContent = 'Não há reservas'
+            spaceMensage.textContent = 'Erro ao buscar as reservas'
          }
          console.log(typeof dados);
      } else {
